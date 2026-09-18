@@ -1,0 +1,27 @@
+running develop
+running egg_info
+creating slam_scripts.egg-info
+writing slam_scripts.egg-info/PKG-INFO
+writing dependency_links to slam_scripts.egg-info/dependency_links.txt
+writing entry points to slam_scripts.egg-info/entry_points.txt
+writing requirements to slam_scripts.egg-info/requires.txt
+writing top-level names to slam_scripts.egg-info/top_level.txt
+writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+reading manifest file 'slam_scripts.egg-info/SOURCES.txt'
+writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+running build_ext
+Creating /tmp/slam_scripts_build/install/slam_scripts/lib/python3.12/site-packages/slam-scripts.egg-link (link to .)
+Installing cloud_to_scan script to /tmp/slam_scripts_build/install/slam_scripts/lib/slam_scripts
+Installing odom_to_tf script to /tmp/slam_scripts_build/install/slam_scripts/lib/slam_scripts
+
+Installed /tmp/slam_scripts_build/build/slam_scripts
+running symlink_data
+creating /tmp/slam_scripts_build/install/slam_scripts/share/ament_index
+creating /tmp/slam_scripts_build/install/slam_scripts/share/ament_index/resource_index
+creating /tmp/slam_scripts_build/install/slam_scripts/share/ament_index/resource_index/packages
+symbolically linking /tmp/slam_scripts_build/build/slam_scripts/resource/slam_scripts -> /tmp/slam_scripts_build/install/slam_scripts/share/ament_index/resource_index/packages
+symbolically linking /tmp/slam_scripts_build/build/slam_scripts/package.xml -> /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts
+creating /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts/launch
+symbolically linking /tmp/slam_scripts_build/build/slam_scripts/launch/slam_bringup.launch.py -> /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts/launch
+creating /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts/config
+symbolically linking /tmp/slam_scripts_build/build/slam_scripts/config/go2_slam.yaml -> /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts/config

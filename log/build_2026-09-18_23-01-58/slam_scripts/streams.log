@@ -1,0 +1,29 @@
+[0.997s] Invoking command in '/tmp/slam_scripts_build/build/slam_scripts': PYTHONPATH=/tmp/slam_scripts_build/build/slam_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/tmp/slam_scripts_build/install/slam_scripts/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /tmp/slam_scripts_build/build/slam_scripts/build --no-deps symlink_data
+[1.200s] running develop
+[1.317s] running egg_info
+[1.317s] creating slam_scripts.egg-info
+[1.331s] writing slam_scripts.egg-info/PKG-INFO
+[1.332s] writing dependency_links to slam_scripts.egg-info/dependency_links.txt
+[1.332s] writing entry points to slam_scripts.egg-info/entry_points.txt
+[1.333s] writing requirements to slam_scripts.egg-info/requires.txt
+[1.333s] writing top-level names to slam_scripts.egg-info/top_level.txt
+[1.333s] writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+[1.354s] reading manifest file 'slam_scripts.egg-info/SOURCES.txt'
+[1.354s] writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+[1.366s] running build_ext
+[1.366s] Creating /tmp/slam_scripts_build/install/slam_scripts/lib/python3.12/site-packages/slam-scripts.egg-link (link to .)
+[1.366s] Installing cloud_to_scan script to /tmp/slam_scripts_build/install/slam_scripts/lib/slam_scripts
+[1.367s] Installing odom_to_tf script to /tmp/slam_scripts_build/install/slam_scripts/lib/slam_scripts
+[1.367s] 
+[1.367s] Installed /tmp/slam_scripts_build/build/slam_scripts
+[1.367s] running symlink_data
+[1.367s] creating /tmp/slam_scripts_build/install/slam_scripts/share/ament_index
+[1.367s] creating /tmp/slam_scripts_build/install/slam_scripts/share/ament_index/resource_index
+[1.368s] creating /tmp/slam_scripts_build/install/slam_scripts/share/ament_index/resource_index/packages
+[1.368s] symbolically linking /tmp/slam_scripts_build/build/slam_scripts/resource/slam_scripts -> /tmp/slam_scripts_build/install/slam_scripts/share/ament_index/resource_index/packages
+[1.368s] symbolically linking /tmp/slam_scripts_build/build/slam_scripts/package.xml -> /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts
+[1.368s] creating /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts/launch
+[1.368s] symbolically linking /tmp/slam_scripts_build/build/slam_scripts/launch/slam_bringup.launch.py -> /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts/launch
+[1.368s] creating /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts/config
+[1.369s] symbolically linking /tmp/slam_scripts_build/build/slam_scripts/config/go2_slam.yaml -> /tmp/slam_scripts_build/install/slam_scripts/share/slam_scripts/config
+[1.386s] Invoked command in '/tmp/slam_scripts_build/build/slam_scripts' returned '0': PYTHONPATH=/tmp/slam_scripts_build/build/slam_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/tmp/slam_scripts_build/install/slam_scripts/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /tmp/slam_scripts_build/build/slam_scripts/build --no-deps symlink_data

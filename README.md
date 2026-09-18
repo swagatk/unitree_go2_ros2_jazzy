@@ -1,192 +1,192 @@
-# Unitree Go2 ROS2
+# Running SLAM with Unitree Go2 Quadruped Robot
 
-<p align="center">
-  <img src="https://oss-global-cdn.unitree.com/static/c487f93e06954100a44fac4442b94d94_288x238.png" alt="Unitree Go2" />
-</p>
+## Credits
+forked from `RobInLabUJI/unitree_go2_ros2_jazzy`
 
-## Overview
+## Dependencies
+- Ubuntu 24.04 LTS (Tested on WSL2 version on Windows 11)
+- ROS2 Jazzy
+- Gazebo Harmonic
 
-This package provides a complete ROS 2 Jazzy integration for the Unitree Go2 quadrupedal robot using the CHAMP controller framework. It includes custom configuration packages and robot description models specifically adapted for ROS 2, enabling simulation, control, and autonomous operation capabilities.
 
-## About Unitree Go2
+## Step 1: Download & Install
 
-The Go2 is a quadrupedal robot manufactured by Unitree Robotics, designed for both research and commercial applications. It features powerful actuators, advanced sensor integration, and a robust mechanical design capable of navigating various terrains.
+### 1.1 Install system dependencies
+Update repositories and install all simulation, control, and mapping packages
+```
+sudo apt update && sudo apt install -y \
+  git \
+  python3-colcon-common-extensions \
+  python3-rosdep \
+  python3-pip \
+  python3-yaml \
+  binutils-gold \
+  ros-jazzy-ros-gz \
+  ros-jazzy-ros-gz-bridge \
+  ros-jazzy-ros-gz-sim \
+  ros-jazzy-gazebo-ros2-control \
+  ros-jazzy-ros2-control \
+  ros-jazzy-ros2controlcli \
+  ros-jazzy-ros2-controllers \
+  ros-jazzy-joint-state-broadcaster \
+  ros-jazzy-joint-trajectory-controller \
+  ros-jazzy-effort-controllers \
+  ros-jazzy-position-controllers \
+  ros-jazzy-velocity-controllers \
+  ros-jazzy-robot-localization \
+  ros-jazzy-xacro \
+  ros-jazzy-velodyne \
+  ros-jazzy-velodyne-description \
+  ros-jazzy-slam-toolbox \
+  ros-jazzy-teleop-twist-keyboard \
+  ros-jazzy-nav2-map-server \
+  ros-jazzy-sensor-msgs-py \
+  ros-jazzy-tf2-tools
 
-## About CHAMP Controller
-
-CHAMP (Coupled Hybrid Automata for Mobile Platforms) is an open-source development framework designed for quadrupedal robots. It provides a hierarchical control system that combines pattern modulation and impedance control techniques for efficient locomotion.
-
-![CHAMP Controller](https://raw.githubusercontent.com/chvmp/champ/master/docs/images/robots.gif)
-
-## Features
-
-- ✅ Complete ROS 2 Jazzy integration
-- ✅ URDF model adapted to ROS 2 control framework
-- ✅ Gazebo Harmonic simulation support
-- ✅ Teleoperation using keyboard
-- ✅ RVIZ visualization
-- ✅ Integrated gait control and configuration
-- ✅ Simulated sensors (in progress):
-  - ✅ IMU
-  - ✅ 2D LiDAR (Hokuyo)
-  - ✅ 3D LiDAR (Velodyne)
-  - ✅ 3D LiDAR (4D Lidar L1) (need some imporvments)
-  - ✅ Mono Camera
-  - ❌ Depth Camera
-  - ❌ GPS
-- ✅ Point cloud visualization in RVIZ
-- ✅ Multiple sensor configurations available
-- ❌ Full SLAM functionality (Coming soon)
-- ❌ Navigation 2 integration (Coming soon)
-
-## System Requirements
-
-- Ubuntu 24.04
-- ROS 2 Jazzy
-- Gazebo Sim Harmonic
-
-## Installation
-
-### 1. Install ROS 2 Dependencies
-
-```bash
-sudo apt update
-sudo apt install ros-jazzy-gazebo-ros2-control
-sudo apt install ros-jazzy-xacro
-sudo apt install ros-jazzy-robot-localization
-sudo apt install ros-jazzy-ros2-controllers
-sudo apt install ros-jazzy-ros2-control
-sudo apt install ros-jazzy-velodyne
-sudo apt install ros-jazzy-velodyne-description
 ```
 
-### 2. Clone and Install CHAMP Controller and Go2 Simulation Packages
+Initialize `rosdep` if not already completed:
 
-```bash
-cd ~/ros2_ws/src
-git clone https://github.com/RobInLabUJI/unitree_go2_ros2_jazzy/
 ```
-
-### 3. Install Dependencies
-
-```bash
-cd ~/ros2_ws
+sudo rosdep init 2>/dev/null || true
 rosdep update
+
+```
+
+### 1.2 Workspace Creation and Repository Cloning
+
+We will clone the **RobInLabUJI Unitree Go2 Gazebo Harmonic Simulation package** (which includes Gazebo models and CHAMP kinematics):
+
+```
+mkdir -p ~/go2_ws/src
+cd ~/go2_ws/src
+
+git clone https://github.com/swagatk/unitree_go2_ros2_jazzy.git
+```
+
+Verify that the expected packages are present:
+
+```
+ls ~/go2_ws/src/unitree_go2_ros2_jazzy
+# Expected output: champ  champ_base  champ_msgs  README.md  slam_scripts  unitree_go2_description  unitree_go2_sim
+
+```
+
+### 1.3 Compiling the Workspace (WSL2 Memory Optimization)
+
+To prevent the GNU linker (`ld`) from running out of RAM and crashing with `Signal 11 [Segmentation fault]` during the `champ_base` compilation, build `champ_base` with a single worker before compiling the rest:
+
+```
+cd ~/go2_ws
+
+# 1. Resolve all dependencies
 rosdep install --from-paths src --ignore-src -r -y
-```
 
-### 4. Build the Workspace
+# 2. Compile champ_base first with 1 parallel worker to conserve memory
+colcon build --symlink-install --packages-select champ_base --parallel-workers 1 --cmake-args -DCMAKE_BUILD_TYPE=Release
 
-```bash
-cd ~/ros2_ws
-colcon build
+# 3. Build the remainder of the workspace
+colcon build --symlink-install
+
+# 4. Source the built environment
 source install/setup.bash
+echo "source ~/go2_ws/install/setup.bash" >> ~/.bashrc
+
 ```
 
-## Usage
+## Step 2: Teleoperation and Sensor Visualization
+Open separate terminal tabs for each process:
 
-### Gazebo Simulation
+**Terminal 1: Gazebo Simulation Launch**
 
-Launch the Gazebo simulation:
-
-```bash
+```
+source ~/go2_ws/install/setup.bash
 ros2 launch unitree_go2_sim unitree_go2_launch.py
+
 ```
 
-![Unitree Go2 Simulation](docs/unitree_go2_sim.png)
+**Terminal 2: PointCloud to LaserScan Converter**
 
-[Watch Demo on YouTube](https://youtu.be/NUu7TaZhaQM)
+```
+source ~/go2_ws/install/setup.bash
+ros2 run slam_scripts cloud_to_scan --ros-args -p use_sim_time:=true
 
-Launch the Gazebo simulation in the TI building:
-
-```bash
-ros2 launch unitree_go2_sim unitree_go2_launch_TI.py
 ```
 
-![Unitree Go2 Simulation](docs/simulation_TI.png)
+**Terminal 3: Odometry Transform Broadcaster**
 
-### RVIZ Visualization
+```
+source ~/go2_ws/install/setup.bash
+ros2 run slam_scripts odom_to_tf --ros-args -p use_sim_time:=true
 
-The package now includes both `Velodyne 3D LiDAR` and `4D Lidar L1` sensors. You can visualize the point cloud data in RVIZ:
-
-Launch Gazebo with RVIZ:
-
-```bash
-ros2 launch unitree_go2_sim unitree_go2_launch.py rviz:=true
 ```
 
-![RVIZ Visualization](docs/unitree_go2_vis.png)
+**Terminal 4: Keyboard Teleoperation**
 
-**Velodyne Lidar and 4D Lidar L1**
-
-![Velodyne Lidar and 4D Lidar L1](docs/1.png)
-
-**Velodyne Lidar Beams**
-
-![Velodyne Lidar Beams](docs/2.png)
-
-**4D Lidar L1 Beams**
-
-![4D Lidar L1 Beams](docs/3.png)
-
-**Velodyne Lidar and 4D Lidar L1 Beams**
-
-![Velodyne Lidar and 4D Lidar L1 Beams](docs/4.png)
-
-**Mono Camera**
-
-![Mono Camera](docs/camera.png)
-
-### Teleoperation
-
-Control the robot using keyboard:
-
-```bash
+```
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
 ```
 
-## Tuning Gait Parameters
+**Terminal 5: RViz2 Visualization**
+*(If not already launched by the launch script)*
 
-The gait configuration for the robot is found in `unitree_go2_sim/config/gait/gait.yaml`. You can modify the following parameters:
+```
+source /opt/ros/jazzy/setup.bash
+ros2 run rviz2 rviz2
 
-| Parameter | Description |
-|-----------|-------------|
-| Knee Orientation | How the knees should be bent (.>> .>< .<< .<>) |
-| Max Linear Velocity X | Maximum forward/reverse speed (m/s) |
-| Max Linear Velocity Y | Maximum sideways speed (m/s) |
-| Max Angular Velocity Z | Maximum rotational speed (rad/s) |
-| Stance Duration | How long each leg spends on the ground while walking |
-| Leg Swing Height | Trajectory height during swing phase (m) |
-| Leg Stance Height | Trajectory depth during stance phase (m) |
-| Robot Walking Height | Distance from hip to ground while walking (m) |
-| CoM X Translation | Offset to compensate for weight distribution |
-| Odometry Scaler | Multiplier to calculated velocities for dead reckoning |
+```
 
-![Velodyne Lidar and 4D Lidar L1](docs/image.png)
+## Step 3: 2D Mapping with SLAM toolbox
 
-## Project Structure
+Open a new terminal and launch the asynchronous mapping node, pointing `params_file` at the config installed by `slam_scripts`:
 
-- `champ/`: Core controllers and state estimation for CHAMP
-- `unitree_go2_description/`: URDF models, meshes, and world files
-- `unitree_go2_sim/`: Simulation launch files and configuration
+```
+source ~/go2_ws/install/setup.bash
+ros2 launch slam_toolbox online_async_launch.py \
+  use_sim_time:=true \
+  params_file:=$(ros2 pkg prefix slam_scripts)/share/slam_scripts/config/go2_slam.yaml
 
-## Contributing
+```
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+**Optional one-shot bringup:** Terminals 2, 3, and this SLAM Toolbox launch can be combined into a single command using the bundled launch file:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'feat: Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+```
+source ~/go2_ws/install/setup.bash
+ros2 launch slam_scripts slam_bringup.launch.py use_sim_time:=true
 
-## Acknowledgements
+```
 
-This project builds upon and incorporates work from the following projects:
+### 3.3 Active Mapping in RViz2
 
-* [Unitree Robotics](https://github.com/unitreerobotics/unitree_ros) - For the Go2 robot description (URDF model)
-* [CHAMP](https://github.com/chvmp/champ) - For the quadruped controller framework
-* [CHAMP Robots](https://github.com/chvmp/robots) - For robot configurations and setup examples
-* [unitree-go2-ros2](https://github.com/anujjain-dev/unitree-go2-ros2) - ROS 2 package with gazebo classic
+Switch to your RViz2 window:
 
-## License
+1. **Change Fixed Frame to `map`:** Under **Global Options**, click `Fixed Frame` and select **`map`** (Critical: if left as `odom`, the map will fail to render progressive updates).
+
+2. Click **Add** $\rightarrow$ select **Map** $\rightarrow$ set `Topic` to **`/map`**.
+
+3. Set **Durability Policy** to `Transient Local`.
+
+4. Click **Reset** in the bottom-left corner of RViz.
+
+Drive the robot around the colored obstacles using the teleop terminal. The white corridors of free space and sharp black boundary walls will expand outward as the robot explores.
+
+### 3.4 Saving the Completed Map
+
+Once the environment has been fully circumnavigated, export the occupancy grid to disk:
+
+```
+source /opt/ros/jazzy/setup.bash
+ros2 run nav2_map_server map_saver_cli -f ~/go2_sim_map --ros-args -p use_sim_time:=true
+
+```
+
+Verify that the map files were written:
+
+```
+ls -lh ~/go2_sim_map.*
+# Output:
+# ~/go2_sim_map.pgm (Occupancy grid image)
+# ~/go2_sim_map.yaml (Origin, resolution, and threshold metadata)
+
+```

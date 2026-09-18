@@ -94,7 +94,7 @@ def generate_launch_description():
         parameters=[
             {"use_sim_time": use_sim_time},
             {"gazebo": True},
-            {"publish_joint_states": True},
+            {"publish_joint_states": False},
             {"publish_joint_control": True},
             {"publish_foot_contacts": False},
             {"joint_controller_topic": "joint_group_effort_controller/joint_trajectory"},
@@ -123,44 +123,44 @@ def generate_launch_description():
         ],
     )
 
-    base_to_footprint_ekf = Node(
-        package="robot_localization",
-        executable="ekf_node",
-        name="base_to_footprint_ekf",
-        output="screen",
-        parameters=[
-            {"base_link_frame": base_frame},
-            {"use_sim_time": use_sim_time},
-            os.path.join(
-                get_package_share_directory("champ_base"),
-                "config",
-                "ekf",
-                "base_to_footprint.yaml",
-            ),
-        ],
-        remappings=[("odometry/filtered", "odom/local")],
-    )
+    #base_to_footprint_ekf = Node(
+    #    package="robot_localization",
+    #    executable="ekf_node",
+    #    name="base_to_footprint_ekf",
+    #    output="screen",
+    #    parameters=[
+    #        {"base_link_frame": base_frame},
+    #        {"use_sim_time": use_sim_time},
+    #        os.path.join(
+    #            get_package_share_directory("champ_base"),
+    #            "config",
+    #            "ekf",
+    #            "base_to_footprint.yaml",
+    #        ),
+    #    ],
+    #    remappings=[("odometry/filtered", "odom/local")],
+    #)
 
-    footprint_to_odom_ekf = Node(
-        package="robot_localization",
-        executable="ekf_node",
-        name="footprint_to_odom_ekf",
-        output="screen",
-        parameters=[
-            {"use_sim_time": use_sim_time},
-            {"base_link_frame": "base_footprint"},
-            {"odom_frame": "odom"},
-            {"world_frame": "odom"},
-            {"publish_tf": True},
-            {"frequency": 50.0},
-            {"two_d_mode": True},
-            {"odom0": "odom/raw"},
-            {"odom0_config": [False, False, False, False, False, False, True, True, False, False, False, True, False, False, False]},
-            {"imu0": "imu/data"},
-            {"imu0_config": [False, False, False, False, False, True, False, False, False, False, False, True, False, False, False]},
-        ],
-        remappings=[("odometry/filtered", "odom")],
-    )
+    #footprint_to_odom_ekf = Node(
+    #    package="robot_localization",
+    #    executable="ekf_node",
+    #    name="footprint_to_odom_ekf",
+    #    output="screen",
+    #    parameters=[
+    #        {"use_sim_time": use_sim_time},
+    #        {"base_link_frame": "base_footprint"},
+    #        {"odom_frame": "odom"},
+    #        {"world_frame": "odom"},
+    #        {"publish_tf": True},
+    #        {"frequency": 50.0},
+    #        {"two_d_mode": True},
+    #        {"odom0": "odom/raw"},
+    #        {"odom0_config": [False, False, False, False, False, False, True, True, False, False, False, True, False, False, False]},
+    #        {"imu0": "imu/data"},
+    #        {"imu0_config": [False, False, False, False, False, True, False, False, False, False, False, True, False, False, False]},
+    #    ],
+    #    remappings=[("odometry/filtered", "odom")],
+    #)
 
     # Go2 static frame connection (map -> odom)
     map_to_odom_tf_node = Node(
@@ -238,8 +238,8 @@ def generate_launch_description():
             # Gazebo to ROS
             '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
             '/imu/data@sensor_msgs/msg/Imu@gz.msgs.IMU',
-            '/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V',
-            '/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model',
+            #'/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V',
+            #'/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model',
             '/velodyne_points/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked',
             '/unitree_lidar/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked',
             # '/velodyne_points@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan',
@@ -323,8 +323,8 @@ def generate_launch_description():
             state_estimator_node,
             
             # EKF nodes for localization
-            base_to_footprint_ekf,
-            footprint_to_odom_ekf,
+            #base_to_footprint_ekf,
+            #footprint_to_odom_ekf,
             
             # TF publishers for frame connections
             map_to_odom_tf_node,
