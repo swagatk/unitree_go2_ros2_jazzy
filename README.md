@@ -190,3 +190,9 @@ ls -lh ~/go2_sim_map.*
 # ~/go2_sim_map.yaml (Origin, resolution, and threshold metadata)
 
 ```
+## Images
+* 2D map generated using slam toolbox
+![2D Map](./images/unitree_slam_map.png)
+
+* Rviz config parameters / Sensor visualization
+![rviz_conf](./images/rviz_config_params.png)
