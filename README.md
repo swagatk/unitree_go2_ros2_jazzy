@@ -196,3 +196,20 @@ ls -lh ~/go2_sim_map.*
 
 * Rviz config parameters / Sensor visualization
 ![rviz_conf](./images/rviz_config_params.png)
+
+## Troubleshooting
+
+* rosdep error:
+
+When running rosdep command you may get the following error message:
+```
+$ rosdep install --from-paths src --ignore-src -r -y
+ERROR: the following packages/stacks could not have their rosdep keys resolved
+to system dependencies:
+slam_scripts: Cannot locate rosdep definition for [ament_python]
+Continuing to install resolvable dependencies...
+#All required rosdeps installed successfully
+swagat@aliensk:~/go2_ws$
+```
+
+This error could be ignored.  You may proceed to the next stage of building your ros2 package.
