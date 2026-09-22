@@ -14,17 +14,21 @@ forked from `RobInLabUJI/unitree_go2_ros2_jazzy`
 ### 1.1 Install system dependencies
 Update repositories and install all simulation, control, and mapping packages
 ```
+# Check ROS 2 distribution
+echo $ROS_DISTRO  # Must print 'jazzy'
+
+# Update package lists and install required tools and simulation dependencies
 sudo apt update && sudo apt install -y \
   git \
   python3-colcon-common-extensions \
   python3-rosdep \
   python3-pip \
   python3-yaml \
-  binutils-gold \
+  binutils \
   ros-jazzy-ros-gz \
   ros-jazzy-ros-gz-bridge \
   ros-jazzy-ros-gz-sim \
-  ros-jazzy-gazebo-ros2-control \
+  ros-jazzy-gz-ros2-control \
   ros-jazzy-ros2-control \
   ros-jazzy-ros2controlcli \
   ros-jazzy-ros2-controllers \
@@ -41,7 +45,14 @@ sudo apt update && sudo apt install -y \
   ros-jazzy-teleop-twist-keyboard \
   ros-jazzy-nav2-map-server \
   ros-jazzy-sensor-msgs-py \
-  ros-jazzy-tf2-tools
+  ros-jazzy-tf2-tools \
+  ros-jazzy-rqt-graph
+
+```
+Configure WSL2 GUI rendering parameters:
+```
+echo "export QT_QPA_PLATFORM=xcb" >> ~/.bashrc
+source ~/.bashrc
 
 ```
 
