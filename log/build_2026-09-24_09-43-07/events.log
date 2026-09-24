@@ -1,0 +1,99 @@
+[0.000000] (-) TimerEvent: {}
+[0.000588] (-) JobUnselected: {'identifier': 'champ'}
+[0.000794] (-) JobUnselected: {'identifier': 'champ_base'}
+[0.001365] (-) JobUnselected: {'identifier': 'champ_msgs'}
+[0.001468] (-) JobUnselected: {'identifier': 'unitree_go2_description'}
+[0.001594] (-) JobUnselected: {'identifier': 'unitree_go2_sim'}
+[0.001627] (slam_scripts) JobQueued: {'identifier': 'slam_scripts', 'dependencies': OrderedDict()}
+[0.002807] (slam_scripts) JobStarted: {'identifier': 'slam_scripts'}
+[0.099196] (-) TimerEvent: {}
+[0.199875] (-) TimerEvent: {}
+[0.300455] (-) TimerEvent: {}
+[0.401070] (-) TimerEvent: {}
+[0.502180] (-) TimerEvent: {}
+[0.602829] (-) TimerEvent: {}
+[0.703445] (-) TimerEvent: {}
+[0.806943] (-) TimerEvent: {}
+[0.907473] (-) TimerEvent: {}
+[1.008014] (-) TimerEvent: {}
+[1.108744] (-) TimerEvent: {}
+[1.209564] (-) TimerEvent: {}
+[1.310201] (-) TimerEvent: {}
+[1.410759] (-) TimerEvent: {}
+[1.511354] (-) TimerEvent: {}
+[1.612592] (-) TimerEvent: {}
+[1.713389] (-) TimerEvent: {}
+[1.814193] (-) TimerEvent: {}
+[1.914838] (-) TimerEvent: {}
+[2.016920] (-) TimerEvent: {}
+[2.117498] (-) TimerEvent: {}
+[2.217986] (-) TimerEvent: {}
+[2.322873] (-) TimerEvent: {}
+[2.423416] (-) TimerEvent: {}
+[2.524280] (-) TimerEvent: {}
+[2.624846] (-) TimerEvent: {}
+[2.725467] (-) TimerEvent: {}
+[2.826103] (-) TimerEvent: {}
+[2.926653] (-) TimerEvent: {}
+[3.027303] (-) TimerEvent: {}
+[3.128788] (-) TimerEvent: {}
+[3.229278] (-) TimerEvent: {}
+[3.329683] (-) TimerEvent: {}
+[3.430973] (-) TimerEvent: {}
+[3.531724] (-) TimerEvent: {}
+[3.632460] (-) TimerEvent: {}
+[3.733170] (-) TimerEvent: {}
+[3.833953] (-) TimerEvent: {}
+[3.934656] (-) TimerEvent: {}
+[4.036136] (-) TimerEvent: {}
+[4.136733] (-) TimerEvent: {}
+[4.237417] (-) TimerEvent: {}
+[4.302710] (slam_scripts) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/build', '--no-deps', 'symlink_data'], 'cwd': '/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'AI_AGENT': 'github_copilot_vscode_agent', 'USER': 'kumars', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_launch_vendor/share/gz:/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_EDITOR': ':', 'GIT_ASKPASS': '/home/kumars/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/kumars/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/kumars/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/kumars/turtlebot3_ws/install/dynamixel_sdk/lib:/home/kumars/go2_ws/install/champ_base/lib:/home/kumars/go2_ws/install/champ_msgs/lib:/opt/ros/jazzy/opt/gz_launch_vendor/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'COPILOT_AGENT': '1', 'HOME': '/home/kumars', 'TERM_PROGRAM_VERSION': '1.138.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-35249f62-3c79-4b35-92d8-c14ea4a4f3d3.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/kumars/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/kumars/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/kumars/unitree_go2_ros2_jazzy/install:/home/kumars/go2_ws/install:/home/kumars/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kumars', 'NAME': 'FASCOMP-44004L', 'WSL_INTEROP': '/run/WSL/16582_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share/', 'HISTCONTROL': 'ignorespace', 'PATH': '/home/kumars/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/kumars/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/kumars/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/kumars/go2_ws/install/champ_base/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Amazon Corretto/jre8/bin:/mnt/c/Program Files/Amazon Corretto/jre8/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/kumars/.local/bin:/mnt/c/Users/kumars/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kumars/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-50d35bb3bc.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '23', 'AMENT_PREFIX_PATH': '/home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts:/home/kumars/turtlebot3_ws/install/turtlebot3:/home/kumars/turtlebot3_ws/install/turtlebot3_teleop:/home/kumars/turtlebot3_ws/install/turtlebot3_simulations:/home/kumars/turtlebot3_ws/install/turtlebot3_bringup:/home/kumars/turtlebot3_ws/install/turtlebot3_node:/home/kumars/turtlebot3_ws/install/turtlebot3_navigation2:/home/kumars/turtlebot3_ws/install/turtlebot3_fake_node:/home/kumars/turtlebot3_ws/install/turtlebot3_example:/home/kumars/turtlebot3_ws/install/turtlebot3_msgs:/home/kumars/turtlebot3_ws/install/turtlebot3_gazebo:/home/kumars/turtlebot3_ws/install/turtlebot3_description:/home/kumars/turtlebot3_ws/install/turtlebot3_cartographer:/home/kumars/turtlebot3_ws/install/dynamixel_sdk_examples:/home/kumars/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/kumars/turtlebot3_ws/install/dynamixel_sdk:/home/kumars/go2_ws/install/unitree_go2_sim:/home/kumars/go2_ws/install/unitree_go2_description:/home/kumars/go2_ws/install/slam_scripts:/home/kumars/go2_ws/install/champ_base:/home/kumars/go2_ws/install/champ_msgs:/home/kumars/go2_ws/install/champ:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'PWD': '/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts', 'GIT_MERGE_AUTOEDIT': 'no', 'TURTLEBOT3_MODEL': 'burger', 'COPILOT_DEBUG_NONCE': '0f5a84c974dba7a8b111f5f14549df5e', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages:/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts:/home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages:/home/kumars/turtlebot3_ws/build/turtlebot3_teleop:/home/kumars/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.12/site-packages:/home/kumars/turtlebot3_ws/build/turtlebot3_example:/home/kumars/turtlebot3_ws/install/turtlebot3_example/lib/python3.12/site-packages:/home/kumars/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages:/home/kumars/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages:/home/kumars/turtlebot3_ws/install/dynamixel_sdk/lib/python3.12/site-packages:/home/kumars/go2_ws/build/slam_scripts:/home/kumars/go2_ws/install/slam_scripts/lib/python3.12/site-packages:/home/kumars/go2_ws/install/champ_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/kumars/turtlebot3_ws/install/turtlebot3:/home/kumars/turtlebot3_ws/install/turtlebot3_simulations:/home/kumars/turtlebot3_ws/install/turtlebot3_bringup:/home/kumars/turtlebot3_ws/install/turtlebot3_node:/home/kumars/turtlebot3_ws/install/turtlebot3_navigation2:/home/kumars/turtlebot3_ws/install/turtlebot3_fake_node:/home/kumars/turtlebot3_ws/install/turtlebot3_msgs:/home/kumars/turtlebot3_ws/install/turtlebot3_gazebo:/home/kumars/turtlebot3_ws/install/turtlebot3_description:/home/kumars/turtlebot3_ws/install/turtlebot3_cartographer:/home/kumars/turtlebot3_ws/install/dynamixel_sdk_examples:/home/kumars/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/kumars/turtlebot3_ws/install/dynamixel_sdk:/home/kumars/go2_ws/install/unitree_go2_sim:/home/kumars/go2_ws/install/unitree_go2_description:/home/kumars/go2_ws/install/champ_base:/home/kumars/go2_ws/install/champ_msgs:/home/kumars/go2_ws/install/champ:/opt/ros/jazzy/opt/gz_launch_vendor:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[4.337587] (-) TimerEvent: {}
+[4.438049] (-) TimerEvent: {}
+[4.538574] (-) TimerEvent: {}
+[4.639135] (-) TimerEvent: {}
+[4.739835] (-) TimerEvent: {}
+[4.840448] (-) TimerEvent: {}
+[4.941201] (-) TimerEvent: {}
+[5.042005] (-) TimerEvent: {}
+[5.143931] (-) TimerEvent: {}
+[5.244532] (-) TimerEvent: {}
+[5.345199] (-) TimerEvent: {}
+[5.445770] (-) TimerEvent: {}
+[5.536536] (slam_scripts) StdoutLine: {'line': b'running develop\n'}
+[5.545977] (-) TimerEvent: {}
+[5.650808] (-) TimerEvent: {}
+[5.755513] (-) TimerEvent: {}
+[5.856692] (-) TimerEvent: {}
+[5.958152] (-) TimerEvent: {}
+[6.058933] (-) TimerEvent: {}
+[6.159457] (-) TimerEvent: {}
+[6.260254] (-) TimerEvent: {}
+[6.344639] (slam_scripts) StdoutLine: {'line': b'running egg_info\n'}
+[6.361904] (-) TimerEvent: {}
+[6.408701] (slam_scripts) StdoutLine: {'line': b'writing slam_scripts.egg-info/PKG-INFO\n'}
+[6.409939] (slam_scripts) StdoutLine: {'line': b'writing dependency_links to slam_scripts.egg-info/dependency_links.txt\n'}
+[6.410522] (slam_scripts) StdoutLine: {'line': b'writing entry points to slam_scripts.egg-info/entry_points.txt\n'}
+[6.410917] (slam_scripts) StdoutLine: {'line': b'writing requirements to slam_scripts.egg-info/requires.txt\n'}
+[6.411099] (slam_scripts) StdoutLine: {'line': b'writing top-level names to slam_scripts.egg-info/top_level.txt\n'}
+[6.462043] (-) TimerEvent: {}
+[6.562548] (-) TimerEvent: {}
+[6.564907] (slam_scripts) StdoutLine: {'line': b"reading manifest file 'slam_scripts.egg-info/SOURCES.txt'\n"}
+[6.566705] (slam_scripts) StdoutLine: {'line': b"writing manifest file 'slam_scripts.egg-info/SOURCES.txt'\n"}
+[6.646405] (slam_scripts) StdoutLine: {'line': b'running build_ext\n'}
+[6.648591] (slam_scripts) StdoutLine: {'line': b'Creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages/slam-scripts.egg-link (link to .)\n'}
+[6.649478] (slam_scripts) StdoutLine: {'line': b'Installing cloud_to_scan script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts\n'}
+[6.649768] (slam_scripts) StdoutLine: {'line': b'Installing odom_to_path script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts\n'}
+[6.650014] (slam_scripts) StdoutLine: {'line': b'Installing odom_to_tf script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts\n'}
+[6.650563] (slam_scripts) StdoutLine: {'line': b'\n'}
+[6.650972] (slam_scripts) StdoutLine: {'line': b'Installed /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts\n'}
+[6.651294] (slam_scripts) StdoutLine: {'line': b'running symlink_data\n'}
+[6.651653] (slam_scripts) StdoutLine: {'line': b'creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map\n'}
+[6.651870] (slam_scripts) StdoutLine: {'line': b'symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/map/go2_sim_map.pgm -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map\n'}
+[6.652384] (slam_scripts) StdoutLine: {'line': b'symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/map/go2_sim_map.yaml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map\n'}
+[6.662893] (-) TimerEvent: {}
+[6.738023] (slam_scripts) CommandEnded: {'returncode': 0}
+[6.763551] (-) TimerEvent: {}
+[6.773825] (slam_scripts) JobEnded: {'identifier': 'slam_scripts', 'rc': 0}
+[6.775458] (-) EventReactorShutdown: {}

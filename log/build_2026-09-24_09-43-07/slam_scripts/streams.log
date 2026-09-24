@@ -1,0 +1,22 @@
+[4.302s] Invoking command in '/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/build --no-deps symlink_data
+[5.534s] running develop
+[6.342s] running egg_info
+[6.407s] writing slam_scripts.egg-info/PKG-INFO
+[6.408s] writing dependency_links to slam_scripts.egg-info/dependency_links.txt
+[6.408s] writing entry points to slam_scripts.egg-info/entry_points.txt
+[6.408s] writing requirements to slam_scripts.egg-info/requires.txt
+[6.408s] writing top-level names to slam_scripts.egg-info/top_level.txt
+[6.562s] reading manifest file 'slam_scripts.egg-info/SOURCES.txt'
+[6.564s] writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+[6.644s] running build_ext
+[6.646s] Creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages/slam-scripts.egg-link (link to .)
+[6.647s] Installing cloud_to_scan script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+[6.647s] Installing odom_to_path script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+[6.647s] Installing odom_to_tf script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+[6.648s] 
+[6.648s] Installed /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts
+[6.649s] running symlink_data
+[6.649s] creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map
+[6.649s] symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/map/go2_sim_map.pgm -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map
+[6.650s] symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/map/go2_sim_map.yaml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map
+[6.742s] Invoked command in '/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/build --no-deps symlink_data

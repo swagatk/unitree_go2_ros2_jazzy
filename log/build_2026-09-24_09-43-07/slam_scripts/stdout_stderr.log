@@ -1,0 +1,20 @@
+running develop
+running egg_info
+writing slam_scripts.egg-info/PKG-INFO
+writing dependency_links to slam_scripts.egg-info/dependency_links.txt
+writing entry points to slam_scripts.egg-info/entry_points.txt
+writing requirements to slam_scripts.egg-info/requires.txt
+writing top-level names to slam_scripts.egg-info/top_level.txt
+reading manifest file 'slam_scripts.egg-info/SOURCES.txt'
+writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages/slam-scripts.egg-link (link to .)
+Installing cloud_to_scan script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+Installing odom_to_path script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+Installing odom_to_tf script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+
+Installed /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts
+running symlink_data
+creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map
+symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/map/go2_sim_map.pgm -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map
+symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/map/go2_sim_map.yaml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/map

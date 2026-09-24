@@ -15,6 +15,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
         (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
+        (os.path.join('share', package_name, 'map'), glob('map/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -27,6 +28,7 @@ setup(
         'console_scripts': [
             'cloud_to_scan = slam_scripts.cloud_to_scan:main',
             'odom_to_tf = slam_scripts.odom_to_tf:main',
+            'odom_to_path = slam_scripts.odom_to_path:main',
         ],
     },
 )

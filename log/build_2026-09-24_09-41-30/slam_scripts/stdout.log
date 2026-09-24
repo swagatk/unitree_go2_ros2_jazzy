@@ -1,0 +1,29 @@
+running develop
+running egg_info
+creating slam_scripts.egg-info
+writing slam_scripts.egg-info/PKG-INFO
+writing dependency_links to slam_scripts.egg-info/dependency_links.txt
+writing entry points to slam_scripts.egg-info/entry_points.txt
+writing requirements to slam_scripts.egg-info/requires.txt
+writing top-level names to slam_scripts.egg-info/top_level.txt
+writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+reading manifest file 'slam_scripts.egg-info/SOURCES.txt'
+writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages/slam-scripts.egg-link (link to .)
+Installing cloud_to_scan script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+Installing odom_to_path script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+Installing odom_to_tf script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+
+Installed /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts
+running symlink_data
+creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/ament_index
+creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/ament_index/resource_index
+creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/ament_index/resource_index/packages
+symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/resource/slam_scripts -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/ament_index/resource_index/packages
+symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/package.xml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts
+creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/launch
+symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/launch/slam_bringup.launch.py -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/launch
+creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/config
+symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/config/go2_slam.yaml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/config
+symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/config/go2_nav2_params.yaml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/config

@@ -1,0 +1,31 @@
+[4.927s] Invoking command in '/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/build --no-deps symlink_data
+[6.025s] running develop
+[6.810s] running egg_info
+[6.811s] creating slam_scripts.egg-info
+[6.897s] writing slam_scripts.egg-info/PKG-INFO
+[6.898s] writing dependency_links to slam_scripts.egg-info/dependency_links.txt
+[6.898s] writing entry points to slam_scripts.egg-info/entry_points.txt
+[6.901s] writing requirements to slam_scripts.egg-info/requires.txt
+[6.901s] writing top-level names to slam_scripts.egg-info/top_level.txt
+[6.901s] writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+[7.047s] reading manifest file 'slam_scripts.egg-info/SOURCES.txt'
+[7.049s] writing manifest file 'slam_scripts.egg-info/SOURCES.txt'
+[7.121s] running build_ext
+[7.122s] Creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages/slam-scripts.egg-link (link to .)
+[7.125s] Installing cloud_to_scan script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+[7.126s] Installing odom_to_path script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+[7.127s] Installing odom_to_tf script to /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/slam_scripts
+[7.128s] 
+[7.128s] Installed /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts
+[7.128s] running symlink_data
+[7.129s] creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/ament_index
+[7.129s] creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/ament_index/resource_index
+[7.130s] creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/ament_index/resource_index/packages
+[7.130s] symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/resource/slam_scripts -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/ament_index/resource_index/packages
+[7.131s] symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/package.xml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts
+[7.131s] creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/launch
+[7.132s] symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/launch/slam_bringup.launch.py -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/launch
+[7.132s] creating /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/config
+[7.132s] symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/config/go2_slam.yaml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/config
+[7.133s] symbolically linking /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/config/go2_nav2_params.yaml -> /home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/share/slam_scripts/config
+[7.247s] Invoked command in '/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kumars/unitree_go2_ros2_jazzy/install/slam_scripts/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/kumars/unitree_go2_ros2_jazzy/build/slam_scripts/build --no-deps symlink_data

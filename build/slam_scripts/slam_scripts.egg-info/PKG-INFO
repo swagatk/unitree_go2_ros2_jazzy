@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: slam-scripts
+Version: 0.0.0
+Summary: Helper nodes to bridge the Go2 LiDAR to 2D LaserScan and broadcast odom->base_footprint TF for slam_toolbox mapping.
+Maintainer: khaled
+Maintainer-email: khaledgabr77@gmail.com
+License: TODO: License declaration
