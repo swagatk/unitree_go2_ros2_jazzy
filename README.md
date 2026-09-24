@@ -43,6 +43,8 @@ sudo apt update && sudo apt install -y \
   ros-jazzy-velodyne-description \
   ros-jazzy-slam-toolbox \
   ros-jazzy-teleop-twist-keyboard \
+  ros-jazzy-navigation2 \
+  ros-jazzy-nav2-bringup \
   ros-jazzy-nav2-map-server \
   ros-jazzy-sensor-msgs-py \
   ros-jazzy-tf2-tools \
@@ -201,6 +203,66 @@ ls -lh ~/go2_sim_map.*
 # ~/go2_sim_map.yaml (Origin, resolution, and threshold metadata)
 
 ```
+
+## Step 4: Autonomous Navigation with Nav2
+
+The package includes a prebuilt map at `slam_scripts/map/go2_sim_map.yaml` and Nav2 parameters at `slam_scripts/config/go2_nav2_params.yaml`. After building and sourcing the workspace, start these processes in separate terminals.
+
+**Terminal 1: Gazebo Simulation**
+
+```
+source ~/go2_ws/install/setup.bash
+ros2 launch unitree_go2_sim unitree_go2_launch.py
+```
+
+**Terminal 2: PointCloud to LaserScan Converter**
+
+```
+source ~/go2_ws/install/setup.bash
+ros2 run slam_scripts cloud_to_scan --ros-args -p use_sim_time:=true
+```
+
+**Terminal 3: Odometry Transform Broadcaster**
+
+```
+source ~/go2_ws/install/setup.bash
+ros2 run slam_scripts odom_to_tf --ros-args -p use_sim_time:=true
+```
+
+**Terminal 4: Nav2 Localization and Navigation**
+
+```
+source ~/go2_ws/install/setup.bash
+ros2 launch nav2_bringup bringup_launch.py \
+  use_sim_time:=true \
+  map:=$(ros2 pkg prefix slam_scripts)/share/slam_scripts/map/go2_sim_map.yaml \
+  params_file:=$(ros2 pkg prefix slam_scripts)/share/slam_scripts/config/go2_nav2_params.yaml
+```
+
+Do not launch `slam_toolbox` while running this Nav2 command: Nav2 uses AMCL to localize against the saved map.
+
+**Terminal 5: Executed Path Publisher (optional)**
+
+```
+source ~/go2_ws/install/setup.bash
+ros2 run slam_scripts odom_to_path --ros-args -p use_sim_time:=true
+```
+
+This node publishes the localized trajectory on `/executed_path`. Add a `Path` display in RViz2, set its topic to `/executed_path`, and use the `map` fixed frame.
+
+### Set the Initial Pose and a Goal
+
+1. In RViz2, set **Fixed Frame** to `map` and add the `/map`, global costmap, local costmap, and `/executed_path` displays as needed.
+2. Use **2D Pose Estimate** to set the robot's initial pose on the loaded map. The position and heading must correspond to the Gazebo spawn pose.
+3. Wait until Nav2 is active, then use **Nav2 Goal** (or **2D Goal Pose**) to select a destination. Nav2 publishes velocity commands on `/cmd_vel`, which is bridged to the Go2 simulation.
+4. Confirm the navigation stack is active with:
+
+```
+ros2 lifecycle get /bt_navigator
+```
+
+The command should report `active` before sending a goal.
+
 ## Images
 * 2D map generated using slam toolbox
 ![2D Map](./images/unitree_slam_map.png)
