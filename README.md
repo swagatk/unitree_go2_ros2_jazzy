@@ -270,6 +270,9 @@ The command should report `active` before sending a goal.
 * Rviz config parameters / Sensor visualization
 ![rviz_conf](./images/rviz_config_params.png)
 
+* Path Planning using Nav2 toolbox
+![planning](./images/unitree_dog_path_planning.png)
+
 ## Troubleshooting
 
 * rosdep error:
